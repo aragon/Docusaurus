@@ -24,6 +24,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@aragon/ui": "^0.11.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
@@ -57,6 +58,7 @@
     "request": "^2.81.0",
     "shelljs": "^0.7.8",
     "sitemap": "^1.13.0",
+    "styled-components": "^3.2.6",
     "tcp-port-used": "^0.1.2"
   },
   "bin": {
