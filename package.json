@@ -1,5 +1,5 @@
 {
-  "name": "docusaurus",
+  "name": "@aragon/docusaurus",
   "description": "Easy to Maintain Open Source Documentation Websites",
   "version": "1.0.15",
   "license": "MIT",
