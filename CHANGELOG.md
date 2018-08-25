@@ -1,16 +1,353 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.3.3] - 2018-08-22
+
+Welcome to our newest users, [atalaya](https://atalaya.io/), [Reaction Commerce](https://docs.reactioncommerce.com/), [Plus (ThinkSNS+)](https://slimkit.github.io) and [nteract](https://docs.nteract.io/).
+
+Thank you to the following contributors who helped with this release:
+
+- @endiliey
+- @joelmarcey
+- @yangshun
+- @apuravchauhan
+- @dballance
+- @helloworld
+- @jreese
+- @machikoyasuda
+- @medz
+- @mikalai-silivonik
+- @miralemd
+- @monkeywithacupcake
+- @parano
+- @patapizza
+- @shaform
+- @steevehook
+- @theletterf
+- @tom-auger
+- @willingc
+
+**Added**
+- Add autoprefixing to CSS pipeline [\#867](https://github.com/facebook/Docusaurus/pull/867)
+- Support `text` language for code block style without any highlighting [\#875](https://github.com/facebook/Docusaurus/pull/875)
+
+**Fixed/Changed**
+- Fix wrong CSS language prefix for fenced blocks [\#842](https://github.com/facebook/Docusaurus/pull/842) [\#870](https://github.com/facebook/Docusaurus/pull/870) 
+- Fix phrase emphasis not italicized [\#850](https://github.com/facebook/Docusaurus/pull/850)
+- Don't replace static assets linking in fenced code blocks [\#864](https://github.com/facebook/Docusaurus/pull/864)
+- Blogpost summary for blog feed is now properly truncated [\#880](https://github.com/facebook/Docusaurus/pull/880)
+- Fix failure to copy static image if image compression fail [\#887](https://github.com/facebook/Docusaurus/pull/887)
+- Fix: correct docs linking for custom `defaultVersionShown` [\#894](https://github.com/facebook/Docusaurus/pull/894)
+- Fix incorrect sitemap url for non default baseUrl [\#902](https://github.com/facebook/Docusaurus/pull/902)
+- Stricter `css/main.css` routing on development server [\#904](https://github.com/facebook/Docusaurus/pull/904)
+- Fix console error when onPageNav !== 'separate' [\#909](https://github.com/facebook/Docusaurus/pull/909)
+
+**Docs**
+- Add documentation regarding usage of nested docs/ subdirectory [\#860](https://github.com/facebook/Docusaurus/pull/860)
+- Improve baseUrl documentation with an example [\#863](https://github.com/facebook/Docusaurus/pull/863)
+- Fix Table of contents documentation typo [\#873](https://github.com/facebook/Docusaurus/pull/873)
+- Update installation doc [\#888](https://github.com/facebook/Docusaurus/pull/888) [\#900](https://github.com/facebook/Docusaurus/pull/900)
+- Update guides-translations.md for CircleCI 2.0 [92f95d](https://github.com/facebook/Docusaurus/commit/92f95df934ab4034c49d66cd82ad5dbbcdee508d)
+
+
+**Chore and Maintenance**
+- Add ESLint [\#836](https://github.com/facebook/Docusaurus/pull/836) [\#837](https://github.com/facebook/Docusaurus/pull/837) [\#841](https://github.com/facebook/Docusaurus/pull/841) [\#846](https://github.com/facebook/Docusaurus/pull/846)
+- Refactor & add more tests for Docusaurus [\#839](https://github.com/facebook/Docusaurus/pull/839) [\#847](https://github.com/facebook/Docusaurus/pull/847) [\#854](https://github.com/facebook/Docusaurus/pull/854) [\#856](https://github.com/facebook/Docusaurus/pull/856)
+- Docusaurus own search will now search the docs in the correct language & version [\#859](https://github.com/facebook/Docusaurus/pull/859)
+- Improve readme [\#866](https://github.com/facebook/Docusaurus/pull/866) 
+- Add prerelease script for Docusaurus [\#876](https://github.com/facebook/Docusaurus/pull/876)
+- Remove unused files [\#881](https://github.com/facebook/Docusaurus/pull/881)
+- Update code of conduct [3c1363d](https://github.com/facebook/Docusaurus/commit/3c1363da1bd445029d7034b0575f69a7077321c3)
+- Update jest to v23 [\#885](https://github.com/facebook/Docusaurus/pull/885)
+- Activating Open Collective [\#883](https://github.com/facebook/Docusaurus/pull/883)
+- Fix Jest tests that fail on Windows [\#896](https://github.com/facebook/Docusaurus/pull/896)
+- Rename Sonar to Flipper [\#905](https://github.com/facebook/Docusaurus/pull/905)
+
+
+## [1.3.2] - 2018-07-06
+
+This version mainly includes bug fixes found in 1.3.1 that improves stability and UX improvements.
+
+Welcome to our newest user, [single-spa](https://single-spa.js.org/), a framework that allows you to use multiple front end frameworks in one SPA.
+
+Thank you to the following contributors who helped with this release:
+
+- @endiliey
+- @chenglou
+
+### Fixed/Changed
+
+- Fix wrong sitemap for alternate URLs (#828)
+- Publish-gh-pages should display the correct commit that triggers it (#829)
+- Fix missing Facebook like buttons in blog posts (#821)
+- Open browser with the correct baseUrl during development (#819)
+- Fix Edit button alignment in Docs (#819)
+
+## [1.3.1] - 2018-06-30
+
+This version mainly includes bug fixes found in 1.3.0 that improves stability.
+
+Thank you to the following contributors who helped with this release:
+
+- @endiliey
+- @yangshun
+- @RhysBower
+- @ngyikp
+
+### Fixed/Changed
+
+- Algolia will search using the [correct version](https://github.com/facebook/Docusaurus/commit/9ff5328c88706d2025fd14c274c14d17712fa048) instead of always using the current.
+- Directory tree printing during initialization will now [exclude `vendor`](https://github.com/facebook/Docusaurus/commit/5a8e9a9ff11a74e4913c5d1f272aa8fc4c67e9c3), a common third-party directory for PHP projects.
+- Fix a bug in the [routing](https://github.com/facebook/Docusaurus/commit/66b2033546a6ad20146d5f81b115d6f080b98e89) for docs and blogs.
+- Sidebar scrollbar will [only appear](https://github.com/facebook/Docusaurus/commit/e4b9b9861b0374790b19f3f84f51ee34f8710f68) when it is longer than the height of the page.
+- Prevent the page from [scrolling to top](https://github.com/facebook/Docusaurus/commit/76870c6a3780323d364da9b9c52502ab4c979378) when clicking the languages button.
+- Fix [incorrect sitemap URLs](https://github.com/facebook/Docusaurus/commit/418c840ad4524cb286ec04842ffa5d474feed1d2).
+- Fix a bug where [promise errors get swallowed](https://github.com/facebook/Docusaurus/commit/f598e2583f73cc5e77b994f9ace027012852cd49), causing CIs to think that the command was successful when it isn't.
+- Fix some [newly discovered issues](https://github.com/facebook/Docusaurus/commit/0b10b193a83dc8ea792e84ffae2a082b895689cb) with the CSS revamp introduced in 1.3.0.
+
+## [1.3.0] - 2018-06-20
+
+1.3.0 introduces a brief clean up of our CSS, overall site typography and some improvements to Algolia search.
+
+Welcome to our newest user, [ml5](https://ml5js.org/), a really cool machine library in JavaScript.
+
+Thank you to the following contributors who helped with this release:
+
+- @endiliey
+- @JoelMarcey
+- @yangshun
+
+### Breaking changes
+
+- Since we made some CSS changes, there's a good chance it might not be compatible with your custom CSS if you have any. We recommend that you audit each page of the site for any UI issues caused by this change. We'll try to minimize such backward-incompatible CSS changes in future.
+- Other UI changes include:
+  - Left sidebar is sticky by default on supported browsers. We saw many of our users write custom CSS for that behavior and decided to incorporate it in the core.
+  - Footer is now a darker shade of black for better contrast.
+  - Background color of site changed to `#fff`.
+  - Headers are now black (from `$primaryColor`) and have bolder font weight.
+  - Blockquotes are changed to yellow (from pink).
+
+### Fixed/Changed
+
+- The search input will now search the docs in the [correct language](https://github.com/facebook/Docusaurus/commit/df429262429e449e78745423ff2c9ab6c6fd1d5c).
+- Algolia will be able to scrap emulti-language and/or versioned sites better with the introduction of [special meta tags](https://github.com/facebook/Docusaurus/commit/0eb6612b58a6ee93d5de715f87201eb9fabc82c2).
+
+### Added
+
+N/A
+
+### Removed
+
+N/A
+
+## [1.2.1] - 2018-06-17
+
+Fixes from existing issues and those found in the 1.2.0 release. Fixes include being able to modify the metadata of a doc without resorting to deleting `en.json`, using absolute URLs instead of relative for docs links, and more. We also added a few new things as well.
+
+Welcome to our newest users, [Babel](https://babeljs.io), [Sonar](https://fbsonar.com), [Metro](https://facebook.github.io/), [StreamPipes](https://docs.streampipes.org/), and [rest-hapi](https://jkheadley.github.io/rest-hapi/).
+
+Thank you to the following contributors who helped with this release:
+
+- @endiliey
+- @yangshun
+- @Kelltimo
+- @ayshiff
+- @rupeshparab
+- @gustavohenke
+- @maxogden
+- @jonathaningram
+- @dominikriemer
+- @anru
+- @Rendez
+- @Thai56
+- @JKHeadley
+
+### Breaking changes
+
+- This may not affect many users, but if you modified the `en.json` to add your own custom translation strings, we [changed](https://github.com/facebook/Docusaurus/commit/608e2c85a21cd17d9f45496a479ec82f5620a48a) how this is handled, and you will need to [follow the instructions here](https://docusaurus.io/docs/en/translation#custom-translation-strings) to modify your setup.
+
+### Added
+
+- Option to [disable](https://github.com/facebook/Docusaurus/commit/62a2c7c1a599ccaf04a86e9ca2ec0fbca5220f5c) live reload during development.
+- Configuration options for [changing](https://github.com/facebook/Docusaurus/commit/58fba70dead064e8c6910e07d3523a548258022f) the title of the blog sidebar info.
+- Better support and [documentation](https://docusaurus.io/docs/en/publishing#using-github-pages) for [cross-repo publishing](https://github.com/facebook/Docusaurus/commit/fd9a3ffb6deca84b41dc5a3b43b0db1ca4f3143e).
+
+### Fixed/Changed
+
+- 1.2.0 introduced a bug where you could not update documentation metadata without deleting `en.json`. This has been [fixed](https://github.com/facebook/Docusaurus/commit/608e2c85a21cd17d9f45496a479ec82f5620a48a) as part of the custom translation string breaking change.
+- Absolute URLs are now [used](https://github.com/facebook/Docusaurus/commit/0f01eace8be1be273a63089a14d1e3ea2d2cae57) instead of relative URLs for documentation linking to avoid trailing slash issues.
+- If you have had trouble updating Docusaurus, it may have been your [Babel cache](https://docusaurus.io/docs/en/installation#updating-your-docusaurus-version).
+- No more errors if heading anchors are [empty](https://github.com/facebook/Docusaurus/commit/371fdda4a8c82b5f29dd5c2dd9f04c8ef28dd025).
+- Fixed bug when [renaming version](https://github.com/facebook/Docusaurus/commit/a2b076bdcaf7099e595f2f106b38dd0cabeee1ef) where `sidebars.json` were not getting updated.
+- Table of contents are now [hidden](https://github.com/facebook/Docusaurus/commit/7bef1b96dc8de8c42795b0983195f66a7ae78c27) when `onPageNav` is not separate.
+
+### Removed
+
+N/A
+
+## [1.2.0] - 2018-06-10
+
+A major point release. This release adds highly requested features, including extension-less URLs, nested directories for docs and adding a second option (Prism) for syntax highlighting.
+
+Welcome to our newest users, [pnpm](https://pnpm.js.org/) and [Anssr Data](https://anssr.io/).
+
+A special thank you to @endiliey who has come in and did awesome work for Docusaurus. @endiliey is now an official maintainer of the Docusaurus repo because of his efforts.
+
+Thank you to the following contributors who helped with this release:
+
+- @endiliey
+- @yangshun
+- @gimdongwoo
+- @balloob
+- @zkochan
+- @gustavohenke
+- @ranolf
+- @Themandunord
+- @ericnakagawa
+- @vacarsu
+- @SleepWalker
+- @brenopolanski
+- @skratchdot
+
+### Breaking changes
+
+None that we know of. Please let us know if you find any as this is a big release and we may have missed something.
+
+### Added
+
+- Sub-directories are now [supported](https://github.com/facebook/Docusaurus/commit/d04b3ca87bb371dd47e6b69a863306ee5f2b1840) for documentation. This was one of most [requested features](https://github.com/facebook/Docusaurus/pull/705).
+- You can now use [Prism for syntax highlighting](https://github.com/facebook/Docusaurus/commit/c8bc00a3a78f6db8f9a9e22aaaf63f56a00cc2ac), in addition to Highlight.js. [Documentation](https://docusaurus.io/docs/en/doc-markdown#using-prism-as-additional-syntax-highlighter)
+- URLs can now be ["clean"](https://github.com/facebook/Docusaurus/commit/31f0c27f81ac9d22f8fdd29f5265e60b5b038773) - no `.html` extension.
+- Scroll to top button [option](https://github.com/facebook/Docusaurus/commit/aee255219bedc97b55048cdb4703742cbb7c247e) for your documentation pages.
+- Can now [set title](https://github.com/facebook/Docusaurus/commit/72f4f369394a9ccdcd721c4f2fa0ee2913ad98dd) for custom pages. [Documentation](https://docusaurus.io/docs/en/api-pages#titles-for-pages)
+- On page [navigation](https://github.com/facebook/Docusaurus/commit/49c27b733bf62506acff3c55f92143dc0ef3ed86) for blog posts.
+- Travis CI [publishing](https://docusaurus.io/docs/en/publishing#using-travis-ci) guide.
+- Can now publish to [GitHub Enterprise](https://github.com/facebook/Docusaurus/commit/2bd9a148c160a0f0de9ab991c66393c629469c37).
+
+### Fixed/Changed
+
+- For better SEO, we now [support](https://github.com/facebook/Docusaurus/commit/c47af6be4b4436f5d9c325b896027e4db3a2d331) `meta:description`.
+- Existing translation files are now [loaded](https://github.com/facebook/Docusaurus/commit/49a5263d62ea58ef1aa4e952e5ed6ec44e4a0b28) correctly.
+- URLs properly [resolve](https://github.com/facebook/Docusaurus/commit/ff93ba985397804741d4f1e31cfb5219e998cec1) no matter which language you are currently viewing.
+- Atom and RSS feed links are [fixed](https://github.com/facebook/Docusaurus/commit/8e58d2e90373e0b2d5373ff875e052f430370a69) for `xxx.github.io` sites.
+- Version pages [link](https://github.com/facebook/Docusaurus/commit/c000aca61f935eb94999e9c46077d106cca22275) to the correct language, depending on the current language.
+- Do not [start server](https://github.com/facebook/Docusaurus/commit/d28b864a59fabeea45add8c090a13de7d0530de5) if `versions.js` is missing and versioning is enabled.
+- [Fail](https://github.com/facebook/Docusaurus/commit/93b2ebb53b49f4c2ba84dcb9b7c98f58dc05ad46) properly when current branch is the same as the deployment one.
+- Assets not found bug [fixed](https://github.com/facebook/Docusaurus/commit/b00e9d14e211e42851ede645ecc1e325120c4e3e) in Windows.
+- OnPageNav now [works](https://github.com/facebook/Docusaurus/commit/3ff24c7926f06e10bf33eba7d1c86f18087e793a) on mobile devices.
+- [Remove](https://github.com/facebook/Docusaurus/commit/b3d59f8a0f7aee606dde0eb7fea9d9d613f34087) extra padding in code blocks.
+- Better [gitignore](https://github.com/facebook/Docusaurus/commit/767cd88d8655ddf81c1975b7850401dacf07908a) for `docusaurus-init`
+- Documentation fixes:  [1](https://github.com/facebook/Docusaurus/commit/52729446261f61fa091d2f4909e9435abb0af645)[2](https://github.com/facebook/Docusaurus/commit/6244bb1aa452c5b98c3f768c0a311cf7f52cb5a8)[3](https://github.com/facebook/Docusaurus/commit/e5ff417cd19a4d9c353c2a054a42cf75d5df9228).
+
+### Removed
+
+N/A
+
+## [1.1.5] - 2018-05-26
+
+Hotfix. A package in `devDependencies` needed to be moved to `dependencies`.
+
+## [1.1.4] - 2018-05-25
+
+Yet another hotfix release. We found an issue with the way we did LiveReload - we were watching the `node_modules` directory and that caused some users to encounter errors. We stopped watching `node_modules` directory in `gaze`.
+
+Thank you to the following contributors who helped with this release:
+
+- @artiebits
+- @yangshun
+
+### Fixed/Changed
+
+- If you already have a tab with the Docusaurus website open, restarting the server will [not open a new browser tab](https://github.com/facebook/Docusaurus/commit/407636a4d92b23fe59c31bbc58a0e3416d91f01f).
+- Updated [directory tree display](https://github.com/facebook/Docusaurus/commit/454e3d359f786069f83a5bfe2687e304f1f0547f) for a newly-generated site.
+- [Don't watch `node_modules`](https://github.com/facebook/Docusaurus/commit/b5fd7bae738ac14d702e80bd3764fee94e0a8e93) in dev server mode.
+
+## [1.1.3] - 2018-05-23
+
+`npm` had an issue where some packages were not being published. This should hopefully be resolved now; publishing a new version just in case.
+
+Also, welcome [TextLint](https://textlint.github.io/) and [Open Power Quality](https://openpowerquality.org/) as new [users](https://docusaurus.io/en/users.html).
+
+Thank you to the following contributors who helped with this release:
+
+- @azu
+- @philipmjohnson
+- @violabg
+- @sebelga
+
+### Fixed/Changed
+
+- `onPageNav` now [shows](https://github.com/facebook/Docusaurus/commit/2c74d937607fcd84677be5d6990ca2a3b4ba8d7a) in Safari.
+
+## [1.1.2] - 2018-05-21
+
+Another HOTFIX release. One of our third-party dependencies, `tree-node-cli` didn't support Node 10+. The package has been fixed and we have updated to use the new version of that package.
+
+## [1.1.1] - 2018-05-21
+
+HOTFIX release. Dependency bug found.
+
+### Fixed/Changed
+
+- `opn` needs to be [installed](https://github.com/facebook/Docusaurus/commit/923356e312687cae107db2ec36aaf52f7f03028a), not just in dev dependencies.
+
+## [1.1.0] - 2018-05-20
+
+This is our first major point release. There are three primary reasons for this:
+
+- One of our most requested issues has been implemented - [Live Reload](https://github.com/facebook/Docusaurus/commit/f9a09072e35e274cf4c13b67d228ece3b7722d47).
+- We [migrated](https://github.com/facebook/Docusaurus/commit/25cf8bb786abf835e4275e2a9975b33bd5fb2b18) to React 16 support (which wasn't as difficult as initially thought :) )
+- The blog now allows for [Facebook-based comments](https://github.com/facebook/Docusaurus/commit/aae106c018667a3787726f7744ce14ccb2b68ef1).
+
+There are a lot of other fixes and enhancements as well. Also, we have five new [users](https://docusaurus.io/en/users.html) of Docusaurus within this release as well. Thank you to [WarriorJS](https://warrior.js.org/), [Bemuse](https://bemuse.ninja/project/), [Pyre-Check](https://pyre-check.org/), [Draft.js](https://draftjs.org/) and [CaptainDuckDuck](https://captainduckduck.com/) for using Docusaurus.
+
+There are also various documentation fixes as well.
+
+We think this is a good release.
+
+Thank you to the following contributors who helped with this release:
+
+- @yangshun
+- @amyrlam
+- @gedeagas
+- @ahmadalfy
+- @endiliey
+- @zpao
+- @NoamELB
+- @sujono91
+
+### Breaking Changes
+
+- For blog posts, [`authorImage` is now `authorImageURL`](https://github.com/facebook/Docusaurus/commit/873a2427f91314fe9f8590cc782c01570f264c6d).
+
+### Added
+
+- [Live Reload](https://github.com/facebook/Docusaurus/commit/f9a09072e35e274cf4c13b67d228ece3b7722d47) allows you to make changes to your documentation without having to manually refresh your site.
+- Running `yarn start` or `npm start` automatically [opens a browser](https://github.com/facebook/Docusaurus/commit/1a6f2fc51c1e1e9fa0e21fe5026a11681435aef3) to the correct `localhost` page.
+- There is now a build option, `--skip-image-compression`, to [compress your images](https://github.com/facebook/Docusaurus/commit/ab6bab9f8d02c3cb402947ea5fd1c9d619478b54).
+- You can now add Twitter and Facebook social buttons to the [footer](https://github.com/facebook/Docusaurus/commit/f8521c2fe1469c549d5f363517d21117358f8862).
+- The blog now allows for [Facebook-based comments](https://github.com/facebook/Docusaurus/commit/aae106c018667a3787726f7744ce14ccb2b68ef1).
+- A [warning](https://github.com/facebook/Docusaurus/commit/436a3d04d213360b71fc6edc45983b192def0f0b) is now shown if you use versioning without a `version.js` file.
+
+### Fixed/Changed
+
+- Various UI fixes
+- Directory tree [printed](https://github.com/facebook/Docusaurus/commit/1796764b1cc56f9c2e46e937a7aa2ffd417b267c) during `docusaurus-init`.
+
+### Removed
+
+- [`authorImage`](https://github.com/facebook/Docusaurus/commit/873a2427f91314fe9f8590cc782c01570f264c6d)
 
 ## [1.0.15] - 2018-05-06
 
 This release has a lot of commits, including bug fixes, documentation updates, as well as a bit of new functionality. A new [blog post](https://docusaurus.io/blog/2018/04/30/How-I-Converted-Profilo-To-Docusaurus.html) from @caabernathy about how easy it is to create a Docusaurus site, a lot of Windows fixes, the ability to specify the default version shown, and more.
 
-Thank you to the following contributors who have helped with this releae:
+Thank you to the following contributors who have helped with this release:
 
 - @yangshun
 - @amyrlam
@@ -365,7 +702,18 @@ N/A
   - Blog
   - Documentation
 
-[Unreleased]: https://github.com/facebook/Docusaurus/compare/v1.0.15...HEAD
+[Unreleased]: https://github.com/facebook/Docusaurus/compare/v1.3.2...HEAD
+[1.3.2]: https://github.com/facebook/Docusaurus/compare/v1.3.1...1.3.2
+[1.3.1]: https://github.com/facebook/Docusaurus/compare/v1.3.0...1.3.1
+[1.3.0]: https://github.com/facebook/Docusaurus/compare/v1.2.1...v1.3.0
+[1.2.1]: https://github.com/facebook/Docusaurus/compare/v1.2.0...v1.2.1
+[1.2.0]: https://github.com/facebook/Docusaurus/compare/v1.1.5...v1.2.0
+[1.1.5]: https://github.com/facebook/Docusaurus/compare/v1.1.4...v1.1.5
+[1.1.4]: https://github.com/facebook/Docusaurus/compare/v1.1.3...v1.1.4
+[1.1.3]: https://github.com/facebook/Docusaurus/compare/v1.1.2...v1.1.3
+[1.1.2]: https://github.com/facebook/Docusaurus/compare/v1.1.1...v1.1.2
+[1.1.1]: https://github.com/facebook/Docusaurus/compare/v1.1.0...v1.1.1
+[1.1.0]: https://github.com/facebook/Docusaurus/compare/v1.0.15...v1.1.0
 [1.0.14]: https://github.com/facebook/Docusaurus/compare/v1.0.14...v1.0.15
 [1.0.14]: https://github.com/facebook/Docusaurus/compare/v1.0.13...v1.0.14
 [1.0.13]: https://github.com/facebook/Docusaurus/compare/v1.0.12...v1.0.13

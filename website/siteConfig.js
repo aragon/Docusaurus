@@ -6,7 +6,7 @@
  */
 
 /* List of projects/orgs using your project for the users page */
-const users = require('./data/users.json');
+const users = require('./data/users');
 
 const siteConfig = {
   title: 'Docusaurus',
@@ -36,23 +36,39 @@ const siteConfig = {
   algolia: {
     apiKey: '3eb9507824b8be89e7a199ecaa1a9d2c',
     indexName: 'docusaurus',
+    algoliaOptions: {
+      facetFilters: ['language:LANGUAGE', 'version:VERSION'],
+    },
   },
   colors: {
     primaryColor: '#2E8555',
     secondaryColor: '#205C3B',
   },
   translationRecruitingLink: 'https://crowdin.com/project/docusaurus',
-  copyright: 'Copyright © ' + new Date().getFullYear() + ' Facebook Inc.',
+  copyright: `Copyright © ${new Date().getFullYear()} Facebook Inc.`,
+  usePrism: ['jsx'],
   highlight: {
     theme: 'atom-one-dark',
   },
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+    '/js/code-blocks-buttons.js',
+  ],
+  stylesheets: ['/css/code-blocks-buttons.css'],
   gaTrackingId: 'UA-44373548-31',
-  facebookAppId: '1615782811974223',
+  facebookAppId: '199138890728411',
+  facebookComments: true,
   twitter: 'true',
+  twitterUsername: 'docusaurus',
   ogImage: 'img/docusaurus.png',
   twitterImage: 'img/docusaurus.png',
   onPageNav: 'separate',
+  cleanUrl: true,
+  scrollToTop: true,
+  scrollToTopOptions: {
+    zIndex: 100,
+  },
 };
 
 module.exports = siteConfig;

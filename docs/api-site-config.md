@@ -17,23 +17,24 @@ The `siteConfig` object contains the bulk of the configuration settings for your
 
 ### Mandatory Fields
 
-`baseUrl` - baseUrl for your site.
+`baseUrl` - baseUrl for your site. For example, `/pages/org/project/` is the baseUrl of https://git.facebook.com/pages/org/project/
 
 `colors` - Color configurations for the site.
 
-  - `primaryColor` is the color used the header navigation bar and sidebars.
-  - `secondaryColor` is the color seen in the second row of the header navigation bar when the site window is narrow (including on mobile).
-  - Custom color configurations can also be added. For example, if user styles are added with colors specified as `$myColor`, then adding a `myColor` field to `colors` will allow you to easily configure this color.
+* `primaryColor` is the color used the header navigation bar and sidebars.
+* `secondaryColor` is the color seen in the second row of the header navigation bar when the site window is narrow (including on mobile).
+* Custom color configurations can also be added. For example, if user styles are added with colors specified as `$myColor`, then adding a `myColor` field to `colors` will allow you to easily configure this color.
 
 `copyright` - The copyright string at footer of site and within feed
 
-`favicon` - url for site favicon.
+`favicon` - URL for site favicon.
 
-`headerIcon` - url for icon used in header navigation bar.
+`headerIcon` - URL for icon used in header navigation bar.
 
 `headerLinks` - Links that will be used in the header navigation bar. The `label` field of each object will be the link text and will also be translated for each language.
 
 Example Usage:
+
 ```js
 headerLinks: [
   // Links to document with id doc1 for current language/version
@@ -55,34 +56,38 @@ headerLinks: [
 
 `organizationName` - GitHub username of the organization or user hosting this project. This is used by the publishing script to determine where your GitHub pages website will be hosted.
 
-`projectName` - Project name. This must match your GitHub repo project name (case sensitive).
+`projectName` - Project name. This must match your GitHub repository project name (case-sensitive).
 
 `tagline` - Tagline for your website.
 
 `title` - Title for your website.
 
-`url` - url for your site.
+`url` - URL for your website.
 
 ### Optional Fields
 
 `algolia` - Information for Algolia search integration. If this field is excluded, the search bar will not appear in the header. You must specify two values for this field, and one (`appId`) is optional.
 
-- `apiKey` - the Algolia provided API key for your search.
-- `indexName` - the Algolia provided index name for your search (usually this is the project name)
-- `appId` - Algolia provides a default scraper for your docs. If you provide your own, you will probably get this id from them.
+* `apiKey` - the Algolia provided API key for your search.
+* `indexName` - the Algolia provided index name for your search (usually this is the project name)
+* `appId` - Algolia provides a default scraper for your docs. If you provide your own, you will probably get this id from them.
 
 `blogSidebarCount` - Control the number of blog posts that show up in the sidebar. See the [adding a blog docs](guides-blog.md#changing-how-many-blog-posts-show-on-sidebar) for more information.
 
-`cname` - The CNAME for your website. It will go into a `CNAME` file when your site it built.
+`blogSidebarTitle` - Control the title of the blog sidebar. See the [adding a blog docs](guides-blog.md#changing-the-sidebar-title) for more information.
 
-`customDocsPath` - By default, Docusaurus expects your documentation to be in a directory called `docs`. This directory is at the same level as the `website` directory (i.e., not inside the `website` directory). You can specify a custom path to your documentation with this field. **Note that all of your documentation `*.md` files must still reside in a flat hierarchy. You cannot have your documents in nested directories**.
+`cleanUrl` - If `true`, allow URLs with no `html` extension. For example, a request to URL https://docusaurus.io/docs/installation will returns the same result as https://docusaurus.io/docs/installation.html.
+
+`cname` - The CNAME for your website. It will go into a `CNAME` file when your site is built.
+
+`customDocsPath` - By default, Docusaurus expects your documentation to be in a directory called `docs`. This directory is at the same level as the `website` directory (i.e., not inside the `website` directory). You can specify a custom path to your documentation with this field.
 
 ```js
-customDocsPath: 'docs/site'
+customDocsPath: 'docs/site';
 ```
 
 ```js
-customDocsPath: 'website-docs'
+customDocsPath: 'website-docs';
 ```
 
 `defaultVersionShown` - The default version for the site to be shown. If this is not set, the latest version will be shown.
@@ -91,13 +96,15 @@ customDocsPath: 'website-docs'
 
 `disableTitleTagline` - An option to disable showing the tagline in the title of main pages. Exclude this field to keep page titles as `Title • Tagline`. Set to `true` to make page titles just `Title`.
 
-`editUrl` - url for editing docs, usage example: `editUrl + 'en/doc1.md'`. If this field is omitted, there will be no "Edit this Doc" button for each document.
+`editUrl` - URL for editing docs, usage example: `editUrl + 'en/doc1.md'`. If this field is omitted, there will be no "Edit this Doc" button for each document.
 
-`facebookAppId` - If you want Facebook Like/Share buttons at the bottom of your blog posts, provide a [Facebook application id](https://www.facebook.com/help/audiencenetwork/804209223039296), and the buttons will show up on all blog posts.
+`facebookAppId` - If you want Facebook Like/Share buttons in the footer and at the bottom of your blog posts, provide a [Facebook application id](https://www.facebook.com/help/audiencenetwork/804209223039296).
+
+`facebookComments` - Set this to `true` if you want to enable Facebook comments at the bottom of your blog post. `facebookAppId` has to be also set.
 
 `facebookPixelId` - [Facebook Pixel](https://www.facebook.com/business/a/facebook-pixel) ID to track page views.
 
-`fonts` - Font-family css configuration for the site. If a font family is specified in `siteConfig.js` as `$myFont`, then adding a `myFont` key to an array in `fonts` will allow you to configure the font. Items appearing earlier in the array will take priority of later elements, so ordering of the fonts matter.
+`fonts` - Font-family CSS configuration for the site. If a font family is specified in `siteConfig.js` as `$myFont`, then adding a `myFont` key to an array in `fonts` will allow you to configure the font. Items appearing earlier in the array will take priority of later elements, so ordering of the fonts matter.
 
 In the below example, we have two sets of font configurations, `myFont` and `myOtherFont`. `Times New Roman` is the preferred font in `myFont`. `-apple-system` is the preferred in `myOtherFont`.
 
@@ -128,13 +135,15 @@ h1 {
 
 `gaGtag` - Set this to `true` if you want to use [global site tags (gtag.js)](https://developers.google.com/gtagjs/) for Google analytics instead of `analytics.js`.
 
+`githubHost` - Hostname of your server. Useful if you are using GitHub Enterprise.
+
 `highlight` - [Syntax highlighting](api-doc-markdown.md) options:
 
- - `theme` is the name of the theme used by Highlight.js when highlighting code. You can find the [list of supported themes here](https://github.com/isagalaev/highlight.js/tree/master/src/styles).
- - `version` specifies a particular version of Highlight.js to be used.
- - `hljs` provides an escape valve by passing an instance of Highlight.js to the function specified here, allowing additional languages to be registered for syntax highlighting.
- - `defaultLang` defines a default language. It will be used if one is not specified at the top of the code block. You can find the [list of supported languages here](https://github.com/isagalaev/highlight.js/tree/master/src/languages).
- - `themeUrl` is the custom URL of CSS theme file that you want to use with Highlight.js. If this is provided, the `theme` and `version` fields will be ignored.
+* `theme` is the name of the theme used by Highlight.js when highlighting code. You can find the [list of supported themes here](https://github.com/isagalaev/highlight.js/tree/master/src/styles).
+* `version` specifies a particular version of Highlight.js to be used.
+* `hljs` provides an escape valve by passing an instance of Highlight.js to the function specified here, allowing additional languages to be registered for syntax highlighting.
+* `defaultLang` defines a default language. It will be used if one is not specified at the top of the code block. You can find the [list of supported languages here](https://github.com/isagalaev/highlight.js/tree/master/src/languages).
+* `themeUrl` is the custom URL of CSS theme file that you want to use with Highlight.js. If this is provided, the `theme` and `version` fields will be ignored.
 
 `markdownPlugins` - An array of plugins to be loaded by Remarkable, the markdown parser and renderer used by Docusaurus. The plugin will receive a reference to the Remarkable instance, allowing custom parsing and rendering rules to be defined.
 
@@ -142,11 +151,15 @@ h1 {
 
 `onPageNav` - If you want a visible navigation option for representing topics on the current page. Currently, there is one accepted value for this option:
 
-- `separate` - The secondary navigation is a separate pane defaulting on the right side of a document. See http://docusaurus.io/docs/en/translation.html for an example.
+* `separate` - The secondary navigation is a separate pane defaulting on the right side of a document. See http://docusaurus.io/docs/en/translation.html for an example.
 
 `scripts` - Array of JavaScript sources to load. The script tag will be inserted in the HTML head.
 
-`separateCss` - Folders inside which any `css` files will not be processed and concatenated to Docusaurus' styles. This is to support static `html` pages that may be separate from Docusaurus with completely separate styles.
+`separateCss` - Directories inside which any `css` files will not be processed and concatenated to Docusaurus' styles. This is to support static `html` pages that may be separate from Docusaurus with completely separate styles.
+
+`scrollToTop` - Set this to `true` if you want to enable the scroll to top button at the bottom of your site.
+
+`scrollToTopOptions` - Optional options configuration for the scroll to top button. You do not need to use this, even if you set `scrollToTop` to `true`; it just provides you more configuration control of the button. You can find more options [here](https://github.com/vfeskov/vanilla-back-to-top/blob/v7.1.14/OPTIONS.md). By default, we set the zIndex option to 100.
 
 `stylesheets` - Array of CSS sources to load. The link tag will be inserted in the HTML head.
 
@@ -154,11 +167,15 @@ h1 {
 
 `twitter` - Set this to `true` if you want a Twitter social button to appear at the bottom of your blog posts.
 
+`twitterUsername` - If you want a Twitter follow button at the bottom of your page, provide a Twitter username to follow. For example: `docusaurus`.
+
 `twitterImage` - Local path to your Twitter card image (e.g., `img/myImage.png`). This image will show up on the Twitter card when your site is shared on Twitter.
 
 `useEnglishUrl` - If you do not have [translations](guides-translation.md) enabled (e.g., by having a `languages.js` file), but still want a link of the form `/docs/en/doc.html` (with the `en`), set this to `true`.
 
 `users` - The `users` array mentioned earlier.
+
+`usePrism` - Array of languages to use Prism syntax highlighter. Refer to [Using Prism as additional syntax highlighter](api-doc-markdown.md#using-prism-as-additional-syntax-highlighter). Set it to `true` to use Prism on all languages.
 
 `wrapPagesHTML` - Boolean flag to indicate whether `html` files in `/pages` should be wrapped with Docusaurus site styles, header and footer. This feature is experimental and relies on the files being `html` fragments instead of complete pages. It inserts the contents of your `html` file with no extra processing. Defaults to `false`.
 
@@ -172,8 +189,8 @@ const users = [
     caption: 'User1',
     image: '/test-site/img/docusaurus.svg',
     infoLink: 'https://www.example.com',
-    pinned: true
-  }
+    pinned: true,
+  },
 ];
 
 const siteConfig = {
@@ -181,7 +198,7 @@ const siteConfig = {
   tagline: 'Generate websites!',
   url: 'https://docusaurus.io',
   baseUrl: '/',
-  // For github.io type URLS, you would combine the url and baseUrl like:
+  // For github.io type URLS, you would combine the URL and baseUrl like:
   // url: 'https://reasonml.github.io',
   // baseUrl: '/reason-react/',
   defaultVersionShown: '1.0.0',
@@ -190,16 +207,16 @@ const siteConfig = {
   noIndex: false,
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: 'doc1', label: 'Docs' },
-    { page: 'help', label: 'Help' },
-    { search: true },
-    { blog: true }
+    {doc: 'doc1', label: 'Docs'},
+    {page: 'help', label: 'Help'},
+    {search: true},
+    {blog: true},
   ],
   headerIcon: 'img/docusaurus.svg',
   favicon: 'img/favicon.png',
   colors: {
     primaryColor: '#2E8555',
-    secondaryColor: '#205C3B'
+    secondaryColor: '#205C3B',
   },
   editUrl: 'https://github.com/facebook/docusaurus/edit/master/docs/',
   // Users variable set above
@@ -208,31 +225,42 @@ const siteConfig = {
   disableTitleTagline: true,
   separateCss: ['static/css/non-docusaurus', 'static/assets/separate-css'],
   footerIcon: 'img/docusaurus.svg',
-  translationRecruitingLink:
-    'https://crowdin.com/project/docusaurus',
+  translationRecruitingLink: 'https://crowdin.com/project/docusaurus',
   algolia: {
-    apiKey:
-      '0f9f28b9ab9efae89810921a351753b5',
-    indexName: 'github'
+    apiKey: '0f9f28b9ab9efae89810921a351753b5',
+    indexName: 'github',
   },
   gaTrackingId: 'UA-12345678-9',
   highlight: {
-    theme: 'default'
+    theme: 'default',
   },
   markdownPlugins: [
     function foo(md) {
-      md.renderer.rules.fence_custom.foo = function(tokens, idx, options, env, instance) {
+      md.renderer.rules.fence_custom.foo = function(
+        tokens,
+        idx,
+        options,
+        env,
+        instance
+      ) {
         return '<div class="foo">bar</div>';
-      }
-    }
+      };
+    },
   ],
-  scripts: [ 'https://docusaurus.io/slash.js' ],
-  stylesheets: [ 'https://docusaurus.io/style.css' ],
+  scripts: ['https://docusaurus.io/slash.js'],
+  stylesheets: ['https://docusaurus.io/style.css'],
   facebookAppId: '1615782811974223',
+  facebookComments: true,
   facebookPixelId: '352490515235776',
   twitter: 'true',
+  twitterUsername: 'docusaurus',
   twitterImage: 'img/docusaurus.png',
   ogImage: 'img/docusaurus.png',
+  cleanUrl: true,
+  scrollToTop: true,
+  scrollToTopOptions: {
+    zIndex: 100,
+  },
 };
 
 module.exports = siteConfig;

@@ -51,11 +51,11 @@ We use [GitHub Issues](https://github.com/facebook/docusaurus/issues) for our pu
 
 If you have questions about using Docusaurus, contact the Docusaurus Twitter account at [@docusaurus](https://twitter.com/docusaurus), and we will do our best to answer your questions.
 
-You can also file issues as [feature requests or enhancements](https://github.com/facebook/docusaurus/labels/enhancement). If you see anything you'd like to be implemented, create an issue and label it as `enhancement`.
+You can also file issues as [feature requests or enhancements](https://github.com/facebook/Docusaurus/labels/feature%20request). If you see anything you'd like to be implemented, create an issue with [feature template](https://raw.githubusercontent.com/facebook/docusaurus/master/.github/ISSUE_TEMPLATE/feature.md)
 
 ## Reporting new issues
 
-When [opening a new issue](https://github.com/facebook/docusaurus/issues/new), always make sure to fill out the [issue template](https://raw.githubusercontent.com/facebook/docusaurus/master/.github/ISSUE_TEMPLATE.md). **This step is very important!** Not doing so may result in your issue not managed in a timely fashion. Don't take this personally if this happens, and feel free to open a new issue once you've gathered all the information required by the template.
+When [opening a new issue](https://github.com/facebook/docusaurus/issues/new/choose), always make sure to fill out the issue template. **This step is very important!** Not doing so may result in your issue not managed in a timely fashion. Don't take this personally if this happens, and feel free to open a new issue once you've gathered all the information required by the template.
 
 * **One issue, one bug:** Please report a single bug per issue.
 * **Provide reproduction steps:** List all the steps necessary to reproduce the issue. The person reading your bug report should be able to follow these steps to reproduce your issue with minimal effort.
@@ -78,9 +78,9 @@ We have a list of [beginner friendly issues](https://github.com/facebook/docusau
 
 ### Proposing a change
 
-If you would like to request a new feature or enhancement but are not yet thinking about opening a pull request, you can also file issues as [feature requests or enhancements](https://github.com/facebook/docusaurus/labels/enhancement)..
+If you would like to request a new feature or enhancement but are not yet thinking about opening a pull request, you can also file an issue with [feature template](https://github.com/facebook/docusaurus/issues/new?template=feature.md).
 
-If you intend to change the public API (e.g., something in `siteConfig.js`), or make any non-trivial changes to the implementation, we recommend [filing an issue](https://github.com/facebook/docusaurus/issues/new?title=%5BProposal%5D) that includes `[Proposal]` in the title. This lets us reach an agreement on your proposal before you put significant effort into it. These types of issues should be rare.
+If you intend to change the public API (e.g., something in `siteConfig.js`), or make any non-trivial changes to the implementation, we recommend filing an issue with [proposal template](https://github.com/facebook/docusaurus/issues/new?template=proposal.md) and including `[Proposal]` in the title. This lets us reach an agreement on your proposal before you put significant effort into it. These types of issues should be rare.
 
 If you're only fixing a bug, it's fine to submit a pull request right away but we still recommend to file an issue detailing what you're fixing. This is helpful in case we don't accept that specific fix but want to keep track of the issue.
 
@@ -93,7 +93,7 @@ Please make sure the following is done when submitting a pull request:
 1. Fork [the repository](https://github.com/facebook/docusaurus) and create your branch from `master`.
 1. Add the copyright notice to the top of any code new files you've added.
 1. Describe your [**test plan**](#test-plan) in your pull request description. Make sure to [test your changes](https://github.com/facebook/Docusaurus/blob/master/admin/testing-changes-on-Docusaurus-itself.md)!
-1. Make sure your code lints (`npm run prettier`).
+1. Make sure your code lints (`npm run prettier && npm run lint`).
 1. Make sure our Jest tests pass (`npm run test`).
 1. If you haven't already, [sign the CLA](https://code.facebook.com/cla).
 
