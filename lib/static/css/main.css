@@ -1480,10 +1480,12 @@ input::placeholder {
 }
 
 /* Start of Docs Main */
+.docMainWrapper {
+  margin: 60px auto;
+}
 .docMainWrapper .wrapper {
   padding-left: 0;
   padding-right: 0;
-  padding-top: 10px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1588,9 +1590,8 @@ input::placeholder {
   display: flex;
   flex-flow: row nowrap;
   font-size: 12px;
-  height: 48px;
   overflow: hidden;
-  padding: 8px 20px;
+  padding: 3px 20px;
 }
 
 .docsNavContainer .toc .navWrapper {
@@ -1868,7 +1869,7 @@ input::placeholder {
   }
 
   .docMainWrapper .wrapper {
-    padding-top: 0;
+    padding-top: 30px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -1929,7 +1930,7 @@ input::placeholder {
       padding: 10px 20px 0 20px;
       position: fixed;
       right: 0;
-      top: 110px;
+      top: 100px;
       z-index: 10;
     }
 
@@ -1967,7 +1968,7 @@ input::placeholder {
       overflow-y: auto;
       position: -webkit-sticky;
       position: sticky;
-      top: 90px;
+      top: 135px;
     }
 
     .onPageNav > .toc-headings {
@@ -2372,4 +2373,27 @@ input::placeholder {
     grid-column-start: 1 !important;
     grid-column-end: 4 !important;
   }
+}
+
+.back-to-home {
+  position: absolute;
+  top: 63px;
+  width: 100vw;
+  left: 0;
+  height: 38px;
+  background-color: #f6f6f6;
+}
+.back-to-home div {
+  max-width: 1420px;
+  margin: auto;
+  line-height: 39px;
+  padding: 0 44px;
+}
+
+.back-to-home div a {
+  cursor: pointer;
+  color: #01bfe3;
+}
+.back-to-home div a:hover {
+  color: #02a2c1;
 }
