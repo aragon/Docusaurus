@@ -1678,6 +1678,15 @@ input#search_input_react {
   position: relative;
   text-align: left;
   width: 18px;
+  display: flex;
+}
+.toc .toggleNav .navToggle:before,
+.toc .toggleNav .navToggle:after {
+  display: none;
+}
+.docsSliderActive .toc .toggleNav .navToggle:before,
+.docsSliderActive .toc .toggleNav .navToggle:after {
+  display: block;
 }
 
 .toc .toggleNav .navToggle:before,
@@ -1733,14 +1742,16 @@ input#search_input_react {
   margin-top: -8px;
 }
 
-.docsSliderActive .toc .toggleNav .navToggle i {
+.docsSliderActive .toc .toggleNav .navToggle img {
   opacity: 0;
 }
 
 .docsSliderActive .tocToggler {
   visibility: hidden;
 }
-
+.tocToggler img {
+  max-width: 65%!important;
+}
 .toc .toggleNav .navGroup {
   margin-bottom: 16px;
 }
