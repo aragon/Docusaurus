@@ -1364,7 +1364,7 @@ input::placeholder {
 }
 
 .reactNavSearchWrapper span {
-    width: 100%;
+  width: 100%;
 }
 input#search_input_react {
   width: 98%;
