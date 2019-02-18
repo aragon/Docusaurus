@@ -1799,7 +1799,7 @@ input#search_input_react {
   display: block;
   font-size: 14px;
   padding: 4px 0;
-  transition: color 0.3s;
+  transition: all 0.15s ease-in-out;
 }
 
 .toc .toggleNav ul li a:hover,
@@ -2344,13 +2344,15 @@ input#search_input_react {
   height: 100%;
   padding: 0 50px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
   white-space: nowrap;
   color: #ffffff;
   font-family: 'HankenGroteskLight',sans-serif !important;
+  transition: all 0.25s ease-in-out 0s;
 }
 .aragon-navbar  a:hover {
   cursor: pointer;
+  color: rgb(34, 224, 255);
 }
 .aragon-navbar a.active {
   color: rgb(34, 224, 255);
