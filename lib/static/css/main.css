@@ -841,7 +841,14 @@ input[type='search'] {
   position: absolute;
   right: 10px;
   top: 15px;
+  border-radius: 3.5px;
+  border: solid 1px #97979769;
+  margin: 36px 0 -36px 0;
 }
+input#search_input_react {
+  padding-left: 10px!important;
+  border-radius: 0;
+ }
 
 .navSearchWrapper:before {
   border: 3px solid #e5e5e5;
@@ -874,9 +881,9 @@ input[type='search'] {
   border: 3px solid rgba(57, 57, 57, 0.25);
   color: #393939;
   font-size: 14px;
-  left: auto !important;
+  left: 0 !important;
   line-height: 1.2em;
-  right: 0 !important;
+  right: auto !important;
 }
 
 .navSearchWrapper
@@ -935,7 +942,6 @@ input#search_input_react {
 input#search_input_react:focus,
 input#search_input_react:active {
   color: #fff;
-  width: 220px;
 }
 
 @media only screen and (max-width: 735px) {
@@ -943,6 +949,13 @@ input#search_input_react:active {
     width: 40%;
   }
 }
+@media only screen and (max-width: 1010px) {
+  .navSearchWrapper {
+    display: none;
+  }
+}
+
+
 
 input::-webkit-input-placeholder {
   color: #e5e5e5;
@@ -1350,9 +1363,22 @@ input::placeholder {
   z-index: 100;
 }
 
+.reactNavSearchWrapper span {
+  width: 100%;
+}
+input#search_input_react {
+  width: 98%;
+  margin: 2px 1%;
+  border-radius: 0;
+}
+
 @media only screen and (max-width: 1024px) {
+  .reactNavSearchWrapper{
+    display: none;
+  }
   .reactNavSearchWrapper input#search_input_react {
-    background-color: rgba(242, 196, 178, 0.25);
+    margin: 3px;
+    background-color: white;
     border: none;
     border-radius: 20px;
     box-sizing: border-box;
@@ -1362,11 +1388,11 @@ input::placeholder {
     outline: none;
     padding-left: 25px;
     position: relative;
-    transition: background-color 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-      width 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), color 0.2s ease;
-    width: 100%;
+    width: 97%;
   }
-
+  .navSearchWrapper {
+    left: 15px;
+  }
   .reactNavSearchWrapper input#search_input_react:focus,
   .reactNavSearchWrapper input#search_input_react:active {
     background-color: $primaryColor;
@@ -1411,7 +1437,7 @@ input::placeholder {
 
 @media only screen and (min-width: 1024px) {
   .navSearchWrapper {
-    padding-left: 10px;
+    padding-left: 0px;
     position: relative;
     right: auto;
     top: auto;
@@ -1652,6 +1678,15 @@ input::placeholder {
   position: relative;
   text-align: left;
   width: 18px;
+  display: flex;
+}
+.toc .toggleNav .navToggle:before,
+.toc .toggleNav .navToggle:after {
+  display: none;
+}
+.docsSliderActive .toc .toggleNav .navToggle:before,
+.docsSliderActive .toc .toggleNav .navToggle:after {
+  display: block;
 }
 
 .toc .toggleNav .navToggle:before,
@@ -1707,14 +1742,16 @@ input::placeholder {
   margin-top: -8px;
 }
 
-.docsSliderActive .toc .toggleNav .navToggle i {
+.docsSliderActive .toc .toggleNav .navToggle img {
   opacity: 0;
 }
 
 .docsSliderActive .tocToggler {
   visibility: hidden;
 }
-
+.tocToggler img {
+  max-width: 65%!important;
+}
 .toc .toggleNav .navGroup {
   margin-bottom: 16px;
 }
@@ -1762,7 +1799,7 @@ input::placeholder {
   display: block;
   font-size: 14px;
   padding: 4px 0;
-  transition: color 0.3s;
+  transition: all 0.15s ease-in-out;
 }
 
 .toc .toggleNav ul li a:hover,
@@ -2307,13 +2344,15 @@ input::placeholder {
   height: 100%;
   padding: 0 50px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
   white-space: nowrap;
   color: #ffffff;
   font-family: 'HankenGroteskLight',sans-serif !important;
+  transition: all 0.25s ease-in-out 0s;
 }
 .aragon-navbar  a:hover {
   cursor: pointer;
+  color: rgb(34, 224, 255);
 }
 .aragon-navbar a.active {
   color: rgb(34, 224, 255);
