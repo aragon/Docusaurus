@@ -5,6 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+const CWD = process.cwd();
+
+const renderToString = require(CWD + '/siteConfig.js').renderToString;
 const renderToStaticMarkup = require('react-dom/server').renderToStaticMarkup;
 
 /**
@@ -17,5 +20,6 @@ function renderToStaticMarkupWithDoctype(...args) {
 }
 
 module.exports = {
-  renderToStaticMarkupWithDoctype,
+  renderToStaticMarkupWithDoctype:
+    renderToString || renderToStaticMarkupWithDoctype,
 };

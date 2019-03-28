@@ -2,7 +2,7 @@
   "keywords": ["documentation", "websites", "open source", "docusaurus"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/Docusaurus.git"
+    "url": "https://github.com/aragon/Docusaurus.git"
   },
   "scripts": {
     "lint:v1": "cd v1 && yarn lint",

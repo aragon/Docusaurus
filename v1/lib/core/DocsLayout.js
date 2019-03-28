@@ -94,7 +94,12 @@ class DocsLayout extends React.Component {
         version={metadata.version}
         metadata={metadata}>
         <div className="docMainWrapper wrapper">
-          <DocsSidebar metadata={metadata} />
+          <div className="back-to-home">
+            <div>
+              <a href={this.props.config.baseUrl}>← Back to home</a>
+            </div>
+          </div>
+          <DocsSidebar metadata={metadata} config={this.props.config} />
           <Container className="mainContainer">
             <DocComponent
               metadata={metadata}

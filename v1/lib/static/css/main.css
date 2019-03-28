@@ -90,7 +90,6 @@ video {
   border: 0;
   font: inherit;
   font-size: 100%;
-  margin: 0;
   padding: 0;
   vertical-align: baseline;
 }
@@ -147,7 +146,7 @@ a:not([href]) {
 }
 
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1em !important;
   margin-top: 0;
 }
 
@@ -161,7 +160,7 @@ h6 {
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 16px;
-  margin-top: 1.5em;
+  margin-top: 1.5em !important;
 }
 
 h1 {
@@ -619,7 +618,7 @@ blockquote {
 .mainContainer {
   flex: 1 1 auto;
   max-width: 100%;
-  padding: 40px 0;
+  padding: 0;
 }
 
 .mainContainer .wrapper {
@@ -843,7 +842,14 @@ input[type='search'] {
   position: absolute;
   right: 10px;
   top: 15px;
+  border-radius: 3.5px;
+  border: solid 1px #97979769;
+  margin: 36px 0 -36px 0;
 }
+input#search_input_react {
+  padding-left: 10px !important;
+  border-radius: 0;
+ }
 
 .navSearchWrapper:before {
   border: 3px solid #e5e5e5;
@@ -876,9 +882,9 @@ input[type='search'] {
   border: 3px solid rgba(57, 57, 57, 0.25);
   color: #393939;
   font-size: 14px;
-  left: auto !important;
+  left: 0 !important;
   line-height: 1.2em;
-  right: 0 !important;
+  right: auto !important;
 }
 
 .navSearchWrapper
@@ -945,7 +951,6 @@ input#search_input_react {
 input#search_input_react:focus,
 input#search_input_react:active {
   color: #fff;
-  width: 220px;
 }
 .navigationSlider .slidingNav .navSearchWrapper .algolia-docsearch-footer a {
   height: auto;
@@ -953,6 +958,11 @@ input#search_input_react:active {
 @media only screen and (max-width: 735px) {
   .navSearchWrapper {
     width: 40%;
+  }
+}
+@media only screen and (max-width: 1010px) {
+  .navSearchWrapper {
+    display: none;
   }
 }
 
@@ -1320,7 +1330,7 @@ input::placeholder {
 .navPusher {
   left: 0;
   min-height: 100%;
-  padding-top: 100px;
+  padding-top: 51px;
   position: relative;
   z-index: 99;
 }
@@ -1366,9 +1376,23 @@ input::placeholder {
   z-index: 100;
 }
 
+.reactNavSearchWrapper span {
+  width: 100%;
+}
+input#search_input_react {
+  width: 98%;
+  margin: 2px 1%;
+  border-radius: 0;
+}
+
 @media only screen and (max-width: 1024px) {
+  .reactNavSearchWrapper {
+    display: none;
+  }
   .reactNavSearchWrapper input#search_input_react {
     background-color: rgba(242, 196, 178, 0.25);
+    margin: 3px;
+    background-color: white;
     border: none;
     border-radius: 20px;
     box-sizing: border-box;
@@ -1378,9 +1402,10 @@ input::placeholder {
     outline: none;
     padding-left: 38px;
     position: relative;
-    transition: background-color 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-      width 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), color 0.2s ease;
-    width: 100%;
+    width: 97%;
+  }
+  .navSearchWrapper {
+    left: 15px;
   }
 
   .reactNavSearchWrapper input#search_input_react:focus,
@@ -1428,7 +1453,7 @@ input::placeholder {
 
 @media only screen and (min-width: 1024px) {
   .navSearchWrapper {
-    padding-left: 10px;
+    padding-left: 0;
     position: relative;
     right: auto;
     top: auto;
@@ -1512,10 +1537,12 @@ input::placeholder {
 }
 
 /* Start of Docs Main */
+.docMainWrapper {
+  margin: 60px auto;
+}
 .docMainWrapper .wrapper {
   padding-left: 0;
   padding-right: 0;
-  padding-top: 10px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1641,19 +1668,20 @@ input::placeholder {
     left: 0;
     position: fixed;
     width: 100%;
+    top: 63px;
     z-index: 100;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .docsNavContainer {
+  /* .docsNavContainer {
     flex: 0 0 240px;
     height: calc(100vh - 50px);
     position: -webkit-sticky;
     position: sticky;
     overflow-y: auto;
     top: 50px; /* Height of navbar */
-  }
+  } */
 }
 
 .docsSliderActive.docsNavContainer {
@@ -1671,9 +1699,8 @@ input::placeholder {
   display: flex;
   flex-flow: row nowrap;
   font-size: 12px;
-  height: 48px;
   overflow: hidden;
-  padding: 8px 20px;
+  padding: 3px 20px;
 }
 
 .docsNavContainer .toc .navWrapper {
@@ -1708,7 +1735,7 @@ input::placeholder {
 
 @media only screen and (min-width: 1024px) {
   .toc {
-    padding: 40px 0;
+    padding: 0;
   }
 }
 
@@ -1734,6 +1761,15 @@ input::placeholder {
   position: relative;
   text-align: left;
   width: 18px;
+  display: flex;
+}
+.toc .toggleNav .navToggle:before,
+.toc .toggleNav .navToggle:after {
+  display: none;
+}
+.docsSliderActive .toc .toggleNav .navToggle:before,
+.docsSliderActive .toc .toggleNav .navToggle:after {
+  display: block;
 }
 
 .toc .toggleNav .navToggle:before,
@@ -1789,7 +1825,7 @@ input::placeholder {
   margin-top: -8px;
 }
 
-.docsSliderActive .toc .toggleNav .navToggle i {
+.docsSliderActive .toc .toggleNav .navToggle img {
   opacity: 0;
 }
 
@@ -1797,6 +1833,9 @@ input::placeholder {
   visibility: hidden;
 }
 
+.tocToggler img {
+  max-width: 65% !important;
+}
 .toc .toggleNav .navGroup {
   margin-bottom: 16px;
 }
@@ -1805,14 +1844,14 @@ input::placeholder {
   margin-bottom: 0;
 }
 
-.toc .toggleNav .navGroup .navGroupCategoryTitle {
+/* .toc .toggleNav .navGroup .navGroupCategoryTitle {
   color: #393939;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.2em;
   margin-bottom: 8px;
   margin-top: 0;
-}
+} */
 
 .toc .toggleNav .navGroup .navGroupSubcategoryTitle {
   color: #393939;
@@ -1858,7 +1897,7 @@ input::placeholder {
   display: block;
   font-size: 14px;
   padding: 4px 0;
-  transition: color 0.3s;
+  transition: all 0.15s ease-in-out;
 }
 
 .toc .toggleNav ul li a:hover,
@@ -1886,6 +1925,7 @@ input::placeholder {
   line-height: 32px;
   margin: 0;
   padding: 0;
+  margin-top: 0 !important;
 }
 
 .docsSliderActive .toc section .navGroups {
@@ -1964,7 +2004,7 @@ input::placeholder {
   }
 
   .docMainWrapper .wrapper {
-    padding-top: 0;
+    padding-top: 30px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -2022,10 +2062,10 @@ input::placeholder {
       left: 0;
       overflow-y: auto;
       overscroll-behavior: contain;
-      padding: 0 20px;
+      padding: 10px 20px 0 20px;
       position: fixed;
       right: 0;
-      top: 148px;
+      top: 100px;
       z-index: 10;
     }
 
@@ -2067,11 +2107,11 @@ input::placeholder {
       overflow-y: auto;
       position: -webkit-sticky;
       position: sticky;
-      top: 90px;
+      top: 135px;
     }
 
     .onPageNav > .toc-headings {
-      border-left: 1px solid #e0e0e0;
+      border-left: 3px solid #01bfe3;
       padding: 10px 0 2px 15px;
     }
 
@@ -2433,4 +2473,123 @@ input::placeholder {
   margin-top: 0;
   border-radius: 0;
   box-shadow: none;
+}
+
+/* Aragon navbar */
+.aragon-navbar {
+  width: 100%;
+  height: 64px;
+  background: rgb(28, 29, 35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+}
+.aragon-navbar .brand {
+  display: flex;
+}
+.aragon-navbar  a {
+  position: relative;
+  outline: 0 !important;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 50px;
+  text-decoration: none;
+  font-size: 15px;
+  white-space: nowrap;
+  color: #ffffff;
+  font-family: 'HankenGroteskLight',sans-serif !important;
+  transition: all 0.25s ease-in-out 0s;
+}
+.aragon-navbar  a:hover {
+  cursor: pointer;
+  color: rgb(34, 224, 255);
+}
+.aragon-navbar a.active {
+  color: rgb(34, 224, 255);
+  font-weight: 800;
+}
+
+.aragon-navbar .center {
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  height: 100%;
+  display: inherit;
+}
+.aragon-navbar .center ul {
+    display: flex;
+    height: 100%;
+    margin: 0;
+}
+.aragon-navbar .center ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 185px;
+}
+.aragon-navbar .center ul li.logo-li {
+    width: 100px;
+}
+.aragon-navbar .center ul li.logo-li a{
+    padding: 0;
+}
+.aragon-navbar .center  button {
+    margin: 0 0 0 10px;
+}
+
+.logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 148px;
+  height: 100%;
+}
+.logo-link img {
+  height: 44px
+}
+
+@media (max-width: 745px) {
+  .aragon-navbar .center ul li {
+      display: none
+  }
+  .aragon-navbar .center ul li.logo-li {
+      display: flex;
+  }
+  .footer-container {
+    grid-template-columns: 33% !important;
+  }
+  .mobile-full {
+    grid-column-start: 1 !important;
+    grid-column-end: 4 !important;
+  }
+}
+
+.back-to-home {
+  position: absolute;
+  top: 63px;
+  width: 100vw;
+  left: 0;
+  height: 38px;
+  background-color: #f6f6f6;
+}
+.back-to-home div {
+  max-width: 1420px;
+  margin: auto;
+  line-height: 39px;
+  padding: 0 44px;
+}
+
+.back-to-home div a {
+  cursor: pointer;
+  color: #01bfe3;
+}
+.back-to-home div a:hover {
+  color: #02a2c1;
 }

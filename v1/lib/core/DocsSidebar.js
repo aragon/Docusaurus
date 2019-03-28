@@ -44,6 +44,7 @@ class DocsSidebar extends React.Component {
           title={this.props.title}
           contents={docsCategories[this.props.metadata.language]}
           current={this.props.metadata}
+          config={this.props.config}
         />
       </Container>
     );
