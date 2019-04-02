@@ -65,7 +65,7 @@ You can also include an optional description attribute to give more context to a
 <p>
 ```
 
-> The `<translate>` tag generally works well on pure strings. If you have a string like "Docusaurus currently provides support to help your website use [translations](${siteConfig.baseUrl}docs/${this.props.language}/translation.html)", wrapping the `<translation>` tag around that entire string will cause issues because of the markdown linking, etc. Your options are to not translate those strings, or spread a bunch of `<translate>` tags amongst the pure substrings of that string.
+> The `<translate>` tag generally works well on pure strings. If you have a string like "Docusaurus currently provides support to help your website use [translations](${siteConfig.baseUrl}${siteConfig.docsUrl}/${this.props.language}/translation.html)", wrapping the `<translation>` tag around that entire string will cause issues because of the markdown linking, etc. Your options are to not translate those strings, or spread a bunch of `<translate>` tags amongst the pure substrings of that string.
 
 ## Gathering Strings to Translate
 
@@ -100,8 +100,16 @@ If you want to add additional custom translation strings, or override any of the
 ```json
 {
   "localized-strings": {
-    "id": "string",
-    "id2": "string2"
+    "docs": {
+      "id": {
+        "title": "string1",
+        "sidebar_label": "string2"
+      },
+      "version-0.0.1-id": {
+        "title": "string3",
+        "sidebar_label": "string4"
+      }
+    }
   },
   "pages-strings" : {
     "id3": "string3",
