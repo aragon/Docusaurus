@@ -1,7 +1,7 @@
 {
   "name": "@aragon/docusaurus",
   "description": "Easy to Maintain Open Source Documentation Websites",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "license": "MIT",
   "keywords": [
     "documentation",
