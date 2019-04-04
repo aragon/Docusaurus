@@ -1680,7 +1680,7 @@ input#search_input_react {
     position: -webkit-sticky;
     position: sticky;
     overflow-y: auto;
-    top: 50px; /* Height of navbar */
+    top: 50px; / Height of navbar /
   } */
 }
 
