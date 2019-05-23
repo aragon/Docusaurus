@@ -295,13 +295,15 @@ class HeaderNav extends React.Component {
       <div>
         <div className="aragon-navbar">
           <div className="center">
-            <ul>
+            <ul className="left">
               <li>
                 <a href="https://aragon.org/discover">Discover</a>
               </li>
               <li>
                 <a className="active">Developers</a>
               </li>
+            </ul>
+            <ul>
               <li className="logo-li">
                 <a className="logo-link" href="https://aragon.org">
                   <img
@@ -311,6 +313,8 @@ class HeaderNav extends React.Component {
                   />
                 </a>
               </li>
+            </ul>
+            <ul className="right">
               <li>
                 <a href="https://aragon.org/project">Project</a>
               </li>
