@@ -2501,9 +2501,11 @@ input#search_input_react {
   height: 100%;
   padding: 0 50px;
   text-decoration: none;
-  font-size: 15px;
   white-space: nowrap;
   color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  font-size: 16px;
   font-family: 'HankenGroteskLight',sans-serif !important;
   transition: all 0.25s ease-in-out 0s;
 }
@@ -2527,15 +2529,24 @@ input#search_input_react {
     display: flex;
     height: 100%;
     margin: 0;
+    padding: 0;
 }
 .aragon-navbar .center ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 185px;
+    width: auto;
+    padding: 0;
 }
-.aragon-navbar .center ul li.logo-li {
-    width: 100px;
+
+.aragon-navbar .center ul.right,
+.aragon-navbar .center ul.left {
+  min-width: 350px;
+}
+
+.aragon-navbar .center ul li.logo-li,
+.aragon-navbar .center ul li.logo {
+  width: 100px;
 }
 .aragon-navbar .center ul li.logo-li a{
     padding: 0;
