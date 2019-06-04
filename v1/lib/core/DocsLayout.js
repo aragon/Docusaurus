@@ -99,6 +99,14 @@ class DocsLayout extends React.Component {
               <a href={this.props.config.baseUrl}>← Back to home</a>
             </div>
           </div>
+          <li className="navSearchWrapper reactNavSearchWrapper" key="search">
+            <input
+              id="search_input_react"
+              type="text"
+              placeholder="Search"
+              title="Search"
+            />
+          </li>
           <DocsSidebar metadata={metadata} config={this.props.config} />
           <Container className="mainContainer">
             <DocComponent

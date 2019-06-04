@@ -158,16 +158,6 @@ class SideNav extends React.Component {
               )}
             </div>
             <div className="navGroups">
-              <li
-                className="navSearchWrapper reactNavSearchWrapper"
-                key="search">
-                <input
-                  id="search_input_react"
-                  type="text"
-                  placeholder="Search"
-                  title="Search"
-                />
-              </li>
               {this.props.contents.map(this.renderCategory)}
             </div>
           </section>
