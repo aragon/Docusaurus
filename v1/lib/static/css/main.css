@@ -882,9 +882,9 @@ input#search_input_react {
   border: 3px solid rgba(57, 57, 57, 0.25);
   color: #393939;
   font-size: 14px;
-  left: 0 !important;
+  left: auto !important;
   line-height: 1.2em;
-  right: auto !important;
+  right: 0 !important;
 }
 
 .navSearchWrapper
@@ -2045,7 +2045,7 @@ input#search_input_react {
   .toc section .navGroups {
     display: block;
     padding: 0px;
-    padding-top: 8px;
+    padding-top: 36px;
   }
 
   .navBreadcrumb h2 {
@@ -2563,7 +2563,8 @@ input#search_input_react {
   height: 100%;
 }
 .logo-link img {
-  height: 44px
+  height: 39px;
+  width: 44px;
 }
 
 @media (max-width: 745px) {
